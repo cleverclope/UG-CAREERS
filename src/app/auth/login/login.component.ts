@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class LoginComponent implements OnInit {
   form !: FormGroup;
-  constructor(private _fb:FormBuilder , private _toastrService:ToastrService , private _router:Router , private _activatedRoute:ActivatedRoute) { }
+  constructor(private _fb : FormBuilder , private _toastrService:ToastrService , private _router:Router , private _activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.form = this._fb.group({
