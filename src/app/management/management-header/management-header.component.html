@@ -1,0 +1,87 @@
+
+<mat-toolbar class="toolbar mat-elevation-z8" >
+  <mat-toolbar-row fxLayoutAlign="space-between center">
+    <div fxFlex="5" fxFlexOffset=5>
+      <h2 style="color: white;">Management Portal</h2>
+    </div>
+
+    <div fxFlex="80" style="margin-right: 30px">
+     <div fxLayout  fxLayoutAlign="end">
+       <a mat-button routerLinkActive="activeLink">
+         <mat-icon style="color: gray;">help</mat-icon> <span style="color: gray;" >Help</span>
+       </a>
+
+       <a mat-button routerLinkActive="activeLink" >
+         <mat-icon  matBadge="8" style="color: gray;" matBadgePosition="after" matBadgeColor="accent">notifications_active</mat-icon>
+       </a>
+
+       <a mat-button routerLinkActive="activeLink" >
+         <mat-icon style="color: gray;">help</mat-icon> <span style="color: gray;" >Help</span>
+       </a>
+
+       <a mat-button routerLinkActive="activeLink" style="background-color: white; margin-right: 5px" [matMenuTriggerFor]="accountMenu">
+         <mat-icon style="color: gray;">manage_accounts</mat-icon>
+         <span style="color: gray;"  >Test</span>
+         <ng-template #defaultEmail></ng-template>
+       </a>
+     </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+  <mat-menu fxLayout #accountMenu="matMenu" overlapTrigger="false">
+    <mat-card class="example-card">
+      <mat-card-header>
+          <mat-card-title >
+            <h2></h2>
+
+            <h4></h4>
+            <ng-template #defaultEmail></ng-template>
+          </mat-card-title>
+
+
+        <ng-template #defaultUser>
+          <mat-card-title>{{'MOH User'}}</mat-card-title>
+        </ng-template>
+
+      </mat-card-header>
+      <mat-divider></mat-divider>
+
+      <mat-card-content>
+        <div style=" display: flex; justify-content: center; margin-top: 20px; " class="container">
+
+          <div *ngIf="imagePath ;else elseImagePath">
+            <img mat-card-image style=" height: 150px; width: 150px; border-radius: 50%;" [src]="imagePath"
+                 alt="Photo of a Shiba Inu">
+          </div>
+
+          <input #photoInput hidden type="file" accept="image/*" (change)="imagePreview($event)">
+
+          <mat-icon matTooltip="Upload New Profile Picture" style="margin-top: 90px; color: #B00020 "
+                    (click)="photoInput.click()">photo_camera
+          </mat-icon>
+
+        </div>
+        <p style="display:flex ; justify-content: center;">
+          Member Since 1960
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button (click)="changePassword()" class="changePassword">
+          <mat-icon>lock</mat-icon>
+          Change
+        </button>
+        <a mat-raised-button routerLink="../auth" class="logout">
+          <mat-icon>power_settings_new</mat-icon>
+          Logout
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </mat-menu>
+
+
+  <ng-template #elseImagePath>
+    <img mat-card-image style=" height: 150px; width: 150px; border-radius: 50%;" src="../../../assets/avatar5.png"
+         alt="Photo">
+  </ng-template>
+

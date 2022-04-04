@@ -1,1 +1,149 @@
-<p>management works!</p>
+
+<mat-sidenav-container>
+
+  <mat-sidenav mode="side" opened class="sidebar-color">
+    <div style="background-color: #056839; height: 8vh ;text-align: center; color: white;">
+      <h2 style="padding-top: 15px">TELECHO</h2>
+    </div>
+    <mat-accordion>
+
+      <mat-nav-list>
+        <a mat-list-item routerLink="Dashboard" style="background-color: #343a40;">
+
+          <mat-icon class="icon_awesome">dashboard</mat-icon>
+
+          <!-- <fa-icon [icon]="twitter" class="icon_awesome"> </fa-icon> -->
+          <span style="padding-left: 10px; color: blanchedalmond;">Dashboard</span>
+        </a>
+      </mat-nav-list>
+
+      <mat-nav-list style="background-color:#343a40;">
+        <a mat-list-item routerLink="Workers">
+          <mat-icon class="icon_awesome">personal_injury</mat-icon>
+          <!-- <fa-icon [icon]="doctor" class="icon_awesome"> </fa-icon> -->
+          <span style="padding-left: 10px; color: blanchedalmond;">Supervision</span>
+        </a>
+      </mat-nav-list>
+
+
+      <mat-nav-list style="background-color:#343a40;">
+        <a mat-list-item routerLink="User Management">
+          <mat-icon class="icon_awesome">manage_accounts</mat-icon>
+          <!-- <fa-icon [icon]="doctor" class="icon_awesome"> </fa-icon> -->
+          <span style="padding-left: 10px; color: blanchedalmond;">User Management</span>
+        </a>
+      </mat-nav-list>
+
+
+
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header style="margin-left:-6px;">
+          <mat-panel-title >
+            <mat-icon class="icon_awesome">corporate_fare</mat-icon>
+            <!-- <fa-icon [icon]="building" class="icon_awesome"> </fa-icon> -->
+            <span style="padding-left: 10px; color: blanchedalmond;">Content Management</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list>
+          <a mat-list-item routerLink="Organisations">
+            <mat-icon aria-hidden="false" style="color: #37959a; padding-right:10px ;">adjust</mat-icon>
+            <span style="padding-left: 10px; color: blanchedalmond;">Blogs</span>
+
+          </a>
+        </mat-nav-list>
+
+        <mat-nav-list>
+          <a mat-list-item routerLink="Organisations/types">
+            <mat-icon aria-hidden="false" style="color: #37959a; padding-right:10px ;">adjust</mat-icon>
+            <span style="padding-left: 10px; color: blanchedalmond;">Posts</span>
+
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header style="margin-left:-6px;">
+          <mat-panel-title >
+            <mat-icon class="icon_awesome">bug_report</mat-icon>
+            <!-- <fa-icon [icon]="building" class="icon_awesome"> </fa-icon> -->
+            <span style="padding-left: 10px; color: blanchedalmond;">Alerts</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list>
+          <a mat-list-item routerLink="Organisations">
+            <mat-icon aria-hidden="false" style="color: #37959a; padding-right:10px ;">adjust</mat-icon>
+            <span style="padding-left: 10px; color: blanchedalmond;">Raised Issue Responses</span>
+
+          </a>
+        </mat-nav-list>
+
+      </mat-expansion-panel>
+
+      <mat-nav-list  style="background-color:#343a40;">
+        <a mat-list-item routerLink="User Management">
+          <mat-icon class="icon_awesome">manage_accounts</mat-icon>
+          <!-- <fa-icon [icon]="doctor" class="icon_awesome"> </fa-icon> -->
+          <span style="padding-left: 10px; color: blanchedalmond;">Health Interactions</span>
+        </a>
+      </mat-nav-list>
+
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header style="margin-left:-6px;">
+          <mat-panel-title >
+            <mat-icon class="icon_awesome">corporate_fare</mat-icon>
+            <!-- <fa-icon [icon]="building" class="icon_awesome"> </fa-icon> -->
+            <span style="padding-left: 10px; color: blanchedalmond;">Reports</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list>
+          <a mat-list-item routerLink="Organisations">
+            <mat-icon aria-hidden="false" style="color: #37959a; padding-right:10px ;">adjust</mat-icon>
+            <span style="padding-left: 10px; color: blanchedalmond;">Health Reports</span>
+
+          </a>
+        </mat-nav-list>
+
+        <mat-nav-list>
+          <a mat-list-item routerLink="Organisations/types">
+            <mat-icon aria-hidden="false" style="color: #37959a; padding-right:10px ;">adjust</mat-icon>
+            <span style="padding-left: 10px; color: blanchedalmond;">Performance Reports</span>
+
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <!--
+
+              <mat-nav-list>
+                <a mat-list-item routerLink="Workers">
+                  <mat-icon class="icon_awesome">flag</mat-icon>
+
+                  <span style="padding-left: 10px; color: blanchedalmond;">National Manage</span>
+                </a>
+              </mat-nav-list> -->
+
+    </mat-accordion>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div id="header-container">
+      <app-management-header></app-management-header>
+    </div>
+
+    <div id="mgt-content-container">
+      <router-outlet ></router-outlet>
+     </div>
+
+    <div id="footer-container">
+      <app-management-footer></app-management-footer>
+    </div>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

@@ -10,7 +10,6 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class LoginComponent implements OnInit {
   form !: FormGroup;
-
   constructor(private _fb:FormBuilder , private _toastrService:ToastrService , private _router:Router , private _activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -26,10 +25,12 @@ export class LoginComponent implements OnInit {
       if (loginData.email==="admin@gmail.com" && loginData.password === "password"){
         this._toastrService.success(`Welcome back ${loginData.email}`)
         this._router.navigate(["../../management"] , {relativeTo:this._activatedRoute})
-      }else if(loginData.email==="user@gmail.com" && loginData.password === "password"){
+      }
+      else if(loginData.email==="user@gmail.com" && loginData.password === "password"){
         this._toastrService.success(`Welcome back ${loginData.email}`)
-        this._router.navigate(["../../account"] , {relativeTo:this._activatedRoute})
-     } else{
+        this._router.navigate(["../../public"] , {relativeTo:this._activatedRoute})
+     }
+      else{
         this._toastrService.warning("Invalid Email or password")
       }
    }

@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path:"" , redirectTo:"/career/auth" , pathMatch:"full"},
   {path:"career/auth" ,  loadChildren: () => import("./auth/auth.module").then(m=> m.AuthModule)} ,
-  {path:"career/account" , loadChildren: () => import("./account/account.module").then(m=> m.AccountModule)} ,
+  {path:"career/public" , loadChildren: () => import("./public/public.module").then(m=> m.PublicModule)} ,
   {path:"career/management" ,  loadChildren: () => import("./management/management.module").then(m=> m.ManagementModule)},
 ];
 
