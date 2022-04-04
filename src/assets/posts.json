@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "name": "",
+    "image": "",
+    "thumbNail": "",
+    "content": "",
+    "rating": 0,
+    "raters": ["1" , "2" , "3"],
+    "user": {"id": "1"}
+  },
+  {
+    "id": "1",
+    "name": "",
+    "image": "",
+    "thumbNail": "",
+    "content": "",
+    "rating": 0,
+    "raters": ["1" , "2" , "3"],
+    "user": {"id": "1"}
+  },
+  {
+    "id": "1",
+    "name": "",
+    "image": "",
+    "thumbNail": "",
+    "content": "",
+    "rating": 0,
+    "raters": ["1" , "2" , "3"],
+    "user": {"id": "1"}
+  }
+]

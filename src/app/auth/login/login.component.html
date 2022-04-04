@@ -1,0 +1,29 @@
+
+<div id="login-container">
+  <div fxLayout fxLayoutAlign="center center" >
+    <mat-card fxFlex="40" class="form-container">
+      <form [formGroup]="form" fxLayout="column" fxLayoutGap="20px" (ngSubmit)="submit()">
+        <mat-form-field appearance="legacy">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="telecho@gmail.com" required formControlName="email">
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Password" type="password" required formControlName="password">
+          <mat-icon matSuffix>password</mat-icon>
+        </mat-form-field>
+
+        <div fxLayout="row" fxLayoutAlign="space-between">
+          <mat-checkbox>Remember Me</mat-checkbox>
+          <a routerLink="../forgot-password" style="text-decoration: none">Forgot Password ?</a>
+        </div>
+
+        <button mat-flat-button color="primary"  type="submit" [disabled]="form.invalid" >Login
+          <mat-icon>login</mat-icon>
+        </button>
+      </form>
+    </mat-card>
+  </div>
+</div>
