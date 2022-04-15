@@ -11,9 +11,17 @@
           Home
         </a>
 
-        <a mat-button routerLinkActive="activeLink" class="link">
+        <a mat-button routerLinkActive="activeLink" class="link" (click)="scheduleMeeting()" >
           <mat-icon style="color: #056839;">info</mat-icon>
           Schedule Meeting
+        </a>
+        <a mat-button routerLinkActive="activeLink" class="link" (click)="raiseIssue()" >
+          <mat-icon style="color: #056839;">info</mat-icon>
+          Raise issue
+        </a>
+        <a mat-button routerLinkActive="activeLink" class="link" (click)="createBlog()" >
+          <mat-icon style="color: #056839;">info</mat-icon>
+         Create Blog
         </a>
 
         <a mat-button routerLinkActive="activeLink" class="link">
@@ -24,9 +32,10 @@
     </div>
 
     <div fxFlex="15">
-      <img src="./assets/coat-of-arm.png" alt="logo" height="50px" width="50px">
-    </div>
-
+      <a mat-button routerLink="../auth" class="link">
+        <mat-icon style="color: #056839;"> logout</mat-icon>
+     logout
+      </a>    </div>
 
     <!--      <div style="margin-top: 120px; margin-left: -110px;">-->
 

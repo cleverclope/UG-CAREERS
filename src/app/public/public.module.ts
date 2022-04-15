@@ -6,6 +6,9 @@ import { PublicComponent } from './public.component';
 import { SharedModule } from '../shared/shared.module';
 import { PublicHeaderComponent } from './public-header/public-header.component';
 import { PublicFooterComponent } from './public-footer/public-footer.component';
+import { ScheduleMeetingComponent } from './schedule-meeting/schedule-meeting.component';
+import { RaiseIssueComponent } from './raise-issue/raise-issue.component';
+import { CreateBlogComponent } from './create-blog/create-blog.component';
 
 
 @NgModule({
@@ -14,6 +17,9 @@ import { PublicFooterComponent } from './public-footer/public-footer.component';
     PublicComponent,
     PublicHeaderComponent,
     PublicFooterComponent,
+    ScheduleMeetingComponent,
+    RaiseIssueComponent,
+    CreateBlogComponent,
   ],
   imports: [
     CommonModule,
